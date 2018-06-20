@@ -1,0 +1,12 @@
+#cedar_map_plugin {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    max-width: 100%;
+
+}
+
+#cedar_map_plugin a{
+    box-shadow: none;
+
+}

@@ -1,0 +1,27 @@
+.form-marker-btn {
+    margin: 10px;
+}
+
+div.form-marker {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+
+.form-marker-container .delete-marker{
+    display: inline-block;
+    padding: 0px;
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
+
+}
+
+.form-marker-container h5{
+    display: inline-block;
+}
+
+form div.required label:after {
+    content: " *";
+    color: red;
+}

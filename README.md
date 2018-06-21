@@ -12,7 +12,7 @@ A mapping service and highly detailed and spatially accurate GIS vector data app
 
 ## Description
 
-A desktop and mobile web mapping service application provided by CedarStudios
+* A desktop and mobile web mapping service application provided by CedarStudios
 * Covers the whole country of Iran (Though we're currently focusing on city of Tehran)
 * Data is in Google Mercator projection (900913 SRID)
 * Consistent all Persian-labeled street maps (English Labels also available)

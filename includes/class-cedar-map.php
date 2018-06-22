@@ -69,8 +69,8 @@ class Cedar_Map
      */
     public function __construct()
     {
-        if (defined('PLUGIN_NAME_VERSION')) {
-            $this->version = PLUGIN_NAME_VERSION;
+        if (defined('CEDAR_MAP_VERSION')) {
+            $this->version = CEDAR_MAP_VERSION;
         } else {
             $this->version = '1.0.0';
         }

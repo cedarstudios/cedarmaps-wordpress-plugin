@@ -8,17 +8,17 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              sina-abadi-uri
+ * @link              https://profiles.wordpress.org/sinaabadi
  * @since             1.0.0
  * @package           Cedar_Map
  *
  * @wordpress-plugin
  * Plugin Name:       Cedar Map
- * Plugin URI:        localhost.com/cedar
+ * Plugin URI:        localhost/cedar
  * Description:       A mapping service and highly detailed and spatially accurate GIS vector data application that covers the whole country of Iran.
  * Version:           1.0.0
- * Author:            Sina
- * Author URI:        sina-abadi-uri
+ * Author:            Sina Abadi
+ * Author URI:        https://profiles.wordpress.org/sinaabadi
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       cedar-map
@@ -35,7 +35,7 @@ if (!defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('PLUGIN_NAME_VERSION', '1.0.0');
+define('CEDAR_MAP_VERSION', '1.0.0');
 
 /**
  * The code that runs during plugin activation.

@@ -1,4 +1,4 @@
-# CedarMaps
+# CedarMap
 
 Contributors: Sina Abadi
 Tags: map
@@ -24,7 +24,9 @@ A mapping service and highly detailed and spatially accurate GIS vector data app
 * Features Route Planning (By car or foot) API
 * Places API also available from our other service called kikojas.com (Kikojas means: "Who is where?" a commonly used slang in Persian) which is a local business directory including 70,000+ validated POIs only in city of Tehran.)
 
+### Base API
 
+We use `https://api.cedarmaps.com/cedarmaps.js/v1.8.0/cedarmaps.js` as our external service to load the map.
 ## Installation
 
 1. Upload plugin to the `/wp-content/plugins/` directory

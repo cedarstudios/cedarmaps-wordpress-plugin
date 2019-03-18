@@ -78,7 +78,6 @@ class Cedar_Map_Admin
          */
 
         wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/cedar-map-admin.css', array(), $this->version, 'all');
-        wp_enqueue_style($this->plugin_name . 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css', array(), $this->version, 'all');
 
     }
 
@@ -109,7 +108,7 @@ class Cedar_Map_Admin
 
     public function add_plugin_admin_menu()
     {
-        add_options_page('CedarMaps Configuration', 'CedarMaps', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page'));
+        add_options_page('تنظیمات سیدارمپ', 'CedarMaps', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page'));
     }
 
     public function add_action_links($links)
@@ -123,6 +122,17 @@ class Cedar_Map_Admin
     public function display_plugin_setup_page()
     {
         include_once('partials/cedar-map-admin-display.php');
+    }
+
+    public static function convertToPersian($string)
+    {
+        $persianNumbers = array('۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹');
+        $arabicNumbers = array('٩', '٨', '٧', '٦', '٥', '٤', '٣', '٢', '١', '٠');
+
+        $num = range(0, 9);
+        $convertedPersianNumbers = str_replace($persianNumbers, $num, $string);
+        $englishNumbers = str_replace($arabicNumbers, $num, $convertedPersianNumbers);
+        return $englishNumbers;
     }
 
     public function validate($input)
@@ -155,23 +165,23 @@ class Cedar_Map_Admin
             );
         }
 
-        $valid['markers'] = [];
-        $inputMarkers = !empty($input['markers']) ? $input['markers'] : [];
+        $valid['markers'] = array();
+        $inputMarkers = !empty($input['markers']) ? $input['markers'] : array();
         foreach ($inputMarkers as $marker) {
             if (empty($marker['popup_name']) || !is_numeric($marker['lat']) || !is_numeric($marker['lng'])) continue;
             $valid['markers'][] = $marker;
 
         }
 
-        $valid['height'] = trim($input['height']);
-        $valid['width'] = trim($input['width']);
-        $valid['api_key'] = trim($input['api_key']);
-        $valid['zoom'] = intval($input['zoom']);
-        $valid['min_zoom'] = intval($input['min_zoom']);
-        $valid['max_zoom'] = intval($input['max_zoom']);
-        $valid['center_lng'] = floatval($input['center_lng']);
-        $valid['center_lat'] = floatval($input['center_lat']);
-        $valid['scroll_wheel_zoom'] = (isset($input['scroll_wheel_zoom']) && !empty($input['scroll_wheel_zoom']));
+        $valid['height'] = self::convertToPersian(trim($input['height']));
+        $valid['width'] = self::convertToPersian(trim($input['width']));
+        $valid['api_key'] = self::convertToPersian(trim($input['api_key']));
+        $valid['zoom'] = self::convertToPersian(intval($input['zoom']));
+        $valid['min_zoom'] = self::convertToPersian(intval($input['min_zoom']));
+        $valid['max_zoom'] = self::convertToPersian(intval($input['max_zoom']));
+        $valid['center_lng'] = self::convertToPersian(floatval($input['center_lng']));
+        $valid['center_lat'] = self::convertToPersian(floatval($input['center_lat']));
+        $valid['scroll_wheel_zoom'] = self::convertToPersian((isset($input['scroll_wheel_zoom']) && !empty($input['scroll_wheel_zoom'])));
         return $valid;
     }
 

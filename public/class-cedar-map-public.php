@@ -106,7 +106,7 @@ class Cedar_Map_Public
          */
 
         wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/cedar-map-public.js', array('jquery'), $this->version, false);
-        wp_localize_script($this->plugin_name, 'options', $this->options);
+        wp_localize_script($this->plugin_name, 'cedarmaps_options', $this->options);
     }
 
     public function check_post_to_include_map($content)

@@ -34,26 +34,26 @@
     // Map options
     var cm_options = {
       "center": {
-        "lat": parseFloat(options.center_lat) || 35.732643,
-        "lng": parseFloat(options.center_lng) || 51.411123
+        "lat": parseFloat(cedarmaps_options.center_lat) || 35.732643,
+        "lng": parseFloat(cedarmaps_options.center_lng) || 51.411123
       },
       "maptype": "light",
-      "scrollWheelZoom": !!options.scroll_wheel_zoom || false,
+      "scrollWheelZoom": !!cedarmaps_options.scroll_wheel_zoom || false,
       "zoomControl": true,
-      "zoom": parseInt(options.zoom) || 15,
-      "minZoom": parseInt(options.min_zoom) || 6,
-      "maxZoom": parseInt(options.max_zoom) || 17,
+      "zoom": parseInt(cedarmaps_options.zoom) || 15,
+      "minZoom": parseInt(cedarmaps_options.min_zoom) || 6,
+      "maxZoom": parseInt(cedarmaps_options.max_zoom) || 17,
       "legendControl": false,
       "attributionControl": false
     };
-    var token = options.api_key;
+    var token = cedarmaps_options.api_key;
 
     // Initialized CedarMap
     var map = window.L.cedarmaps.map('cedar_map_plugin', 'https://api.cedarmaps.com/v1/tiles/cedarmaps.streets.json?access_token=' + token, cm_options
       )
     ;
     var markers = [];
-    var markerOptionObjects = options.markers || [];
+    var markerOptionObjects = cedarmaps_options.markers || [];
     if (markerOptionObjects.length !== 0)
       for (var index in markerOptionObjects) {
         markers.push({
@@ -109,11 +109,11 @@
       c.body.appendChild(p);
     })(document, 'script', 'https://api.cedarmaps.com/cedarmaps.js/v1.8.0/cedarmaps.js', contactMap);
 
-    if (options.width) {
-      cedarMapElement.css('width', options.width)
+    if (cedarmaps_options.width) {
+      cedarMapElement.css('width', cedarmaps_options.width)
     }
-    if (options.height) {
-      cedarMapElement.css('height', options.height)
+    if (cedarmaps_options.height) {
+      cedarMapElement.css('height', cedarmaps_options.height)
     }
   })
 

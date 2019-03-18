@@ -6,7 +6,11 @@
 
 }
 
-#cedar_map_plugin a{
+#cedar_map_plugin a {
     box-shadow: none;
+}
 
+.leaflet-container img.leaflet-tile {
+    max-width: none !important;
+    max-height: none !important;
 }

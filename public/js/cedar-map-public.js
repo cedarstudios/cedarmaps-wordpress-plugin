@@ -107,7 +107,7 @@
       p.src = d;
       p.onload = a;
       c.body.appendChild(p);
-    })(document, 'script', 'https://api.cedarmaps.com/cedarmaps.js/v1.8.0/cedarmaps.js', contactMap);
+    })(document, 'script', 'https://api.cedarmaps.com/cedarmaps.js/v1.8.1/cedarmaps.js', contactMap);
 
     if (cedarmaps_options.width) {
       cedarMapElement.css('width', cedarmaps_options.width)

@@ -80,7 +80,7 @@ class Cedar_Map_Public
          * class.
          */
 
-        wp_enqueue_style($this->plugin_name . '-api', 'https://api.cedarmaps.com/cedarmaps.js/v1.8.0/cedarmaps.css', array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name . '-api', 'https://api.cedarmaps.com/cedarmaps.js/v1.8.1/cedarmaps.css', array(), $this->version, 'all');
         wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/cedar-map-public.css', array(), $this->version, 'all');
 
     }

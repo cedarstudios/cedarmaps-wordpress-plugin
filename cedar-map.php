@@ -16,7 +16,7 @@
  * Plugin Name:       Cedar Maps
  * Plugin URI:        https://www.cedarmaps.com/
  * Description:       A mapping service and highly detailed and spatially accurate GIS vector data application that covers the whole country of Iran.
- * Version:           1.0.6
+ * Version:           1.0.7
  * Author:            CedarMaps
  * Author URI:        https://profiles.wordpress.org/cedarmaps
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if (!defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('CEDAR_MAP_VERSION', '1.0.6');
+define('CEDAR_MAP_VERSION', '1.0.7');
 
 /**
  * The code that runs during plugin activation.
